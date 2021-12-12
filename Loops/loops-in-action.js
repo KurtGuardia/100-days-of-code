@@ -20,3 +20,19 @@ calculateSum = () => {
 };
 
 calculateSumButtonEl.addEventListener('click', calculateSum);
+
+// Second example: Highlight links
+
+const highlightLinksButtonEl = document.querySelector(
+  '#highlight-links button'
+);
+
+highlightLinks = () => {
+  const anchorElements = document.querySelectorAll('#highlight-links a');
+
+  for (const anchorElement of anchorElements) {
+    anchorElement.classList.add('highlight');
+  }
+};
+
+highlightLinksButtonEl.addEventListener('click', highlightLinks);
