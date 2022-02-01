@@ -36,3 +36,28 @@ highlightLinks = () => {
 };
 
 highlightLinksButtonEl.addEventListener('click', highlightLinks);
+
+// Third examnple: Display user data
+
+const dummyUserData = {
+  firstName: 'Kurt',
+  LastName: 'Guardia',
+  age: 29,
+};
+
+const displayUserDataButtonEl = document.querySelector('#user-data button');
+
+displayUserData = () => {
+  const outputDataEl = document.getElementById('output-user-data');
+
+  outputDataEl.innerHTML = '';
+
+  for (const key in dummyUserData) {
+    const nweUserDataListItemEl = document.createElement('li');
+    const outputText = key.toUpperCase() + ':' + dummyUserData[key];
+    nweUserDataListItemEl.textContent = outputText;
+    outputDataEl.append(nweUserDataListItemEl);
+  }
+};
+
+displayUserDataButtonEl.addEventListener('click', displayUserData);
